@@ -54,24 +54,25 @@ class MyCircularQueue:
             return True
         else:
             return False
+       
 
 
 # Do not change the following code
-operations = []
-for specific_operation in input().split(','):
-    operations.append(specific_operation.strip())
-data = []
-for item in input().split(','):
-    item = item.strip()
+    operations = []
+    for specific_operation in input().split(','):
+        operations.append(specific_operation.strip())
+        data = []
+    for item in input().split(','):
+        item = item.strip()
     if item == '-':
         data.append([])
     else:
         data.append([int(item)])
-obj = MyCircularQueue(data[0][0])
-result = []
-for i in range(len(operations)):
+       obj = MyCircularQueue(data[0][0])
+       result = []
+    for i in range(len(operations)):
     if i == 0:
-        result.append(None)
+       result.append(None)
     elif operations[i] == "enqueue":
         result.append(obj.enqueue(data[i][0]))
     elif operations[i] == "get_rear":
