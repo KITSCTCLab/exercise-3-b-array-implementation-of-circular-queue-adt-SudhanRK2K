@@ -86,4 +86,4 @@ class MyCircularQueue:
     elif operations[i] == "is_empty":
         result.append(obj.is_empty())
 
-print(result)
+    print(result)
